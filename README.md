@@ -62,6 +62,30 @@ nix run github:whizbangdevelopers-org/nur-packages#qepton
 nix build github:whizbangdevelopers-org/nur-packages#qepton
 ```
 
+## Authentication
+
+Qepton requires a GitHub token with `gist` scope. NixOS users have several options:
+
+### Option 1: Import from gh CLI (Recommended)
+
+If you use `gh` CLI with keyring-based auth:
+
+1. Ensure you're logged in: `gh auth login`
+2. Launch Qepton and click **"Import from gh CLI"** on the login page
+
+The app will automatically retrieve your token via `gh auth token`.
+
+### Option 2: Manual Token Entry
+
+1. Copy your token: `gh auth token | wl-copy`
+2. Paste it into the token field on the login page
+
+### Option 3: Create a Personal Access Token
+
+1. Visit [GitHub Token Settings](https://github.com/settings/tokens/new?scopes=gist&description=Qepton)
+2. Generate a token with `gist` scope
+3. Enter the token on the login page
+
 ## Development
 
 ```bash
