@@ -6,11 +6,11 @@
 
 let
   pname = "qepton";
-  version = "1.0.20";
+  version = "1.0.21";
 
   src = fetchurl {
     url = "https://github.com/whizbangdevelopers-org/Qepton/releases/download/v${version}/Qepton-${version}.AppImage";
-    hash = "sha256-u4DAb9HHe+S+fI4itJtc6GMEtbRuSwoFFwm3F/5X9pk=";
+    hash = "sha256-812jPuPt9A1NuyR0RFotfu/P+LxSsi4Tjc+CmWvY8Bk=";
   };
 
   appimageContents = appimageTools.extractType2 { inherit pname version src; };
