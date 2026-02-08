@@ -15,4 +15,5 @@
 
   # Packages
   qepton = pkgs.callPackage ./pkgs/qepton { };
+  microvm-dashboard = pkgs.callPackage ./pkgs/microvm-dashboard { };
 }

@@ -15,12 +15,14 @@
         in
         {
           qepton = pkgs.callPackage ./pkgs/qepton { };
+          microvm-dashboard = pkgs.callPackage ./pkgs/microvm-dashboard { };
           default = self.packages.${system}.qepton;
         }
       );
 
       overlays.default = final: prev: {
         qepton = final.callPackage ./pkgs/qepton { };
+        microvm-dashboard = final.callPackage ./pkgs/microvm-dashboard { };
       };
     };
 }

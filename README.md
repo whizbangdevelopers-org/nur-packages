@@ -9,6 +9,7 @@ Nix User Repository packages from [whizBANG Developers](https://github.com/whizb
 | Package | Description |
 |---------|-------------|
 | `qepton` | AI Prompt and Code Snippet Manager powered by GitHub Gist |
+| `microvm-dashboard` | NixOS MicroVM Management Dashboard |
 
 ## Usage
 
