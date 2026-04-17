@@ -1,3 +1,15 @@
+# Weaver Free tier only — AGPL-3.0 licensed.
+#
+# LICENSING GATE: Weaver Solo / Team / Fabrick are BSL-1.1 (Business Source
+# License) and distributed through commercial channels. They are NEVER
+# eligible for NUR publication. The `fetchFromGitHub` target below fetches
+# from Weaver-Free — the AGPL-3.0 public mirror maintained by the upstream
+# sync workflow. All paid-tier code paths are structurally excluded from
+# Weaver-Free via .github/sync-exclude.yml in whizbangdevelopers-org/Weaver-Dev.
+#
+# Do NOT change `repo` to `Weaver-Dev` or any private/paid-tier repository.
+# Doing so would publish BSL-1.1 commercial code to a public community
+# repository in violation of the license.
 {
   lib,
   buildNpmPackage,

@@ -9,7 +9,9 @@ Nix User Repository packages from [whizBANG Developers](https://github.com/whizb
 | Package | Description |
 |---------|-------------|
 | `qepton` | AI Prompt and Code Snippet Manager powered by GitHub Gist |
-| `microvm-dashboard` | NixOS MicroVM Management Dashboard |
+| `weaver-free` | NixOS workload isolation — unified container and MicroVM management (Free tier, AGPL-3.0). Weaver Solo / Team / Fabrick are commercial tiers and are not distributed via NUR. |
+
+> **Licensing gate:** This NUR repository distributes **open-source (AGPL-3.0 or MIT) packages only**. Commercial-licensed tiers of whizBANG products (Weaver Solo / Team / Fabrick under BSL-1.1) are distributed through commercial channels and will never appear here.
 
 ## Usage
 
