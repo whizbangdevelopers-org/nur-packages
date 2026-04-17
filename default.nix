@@ -15,5 +15,5 @@
 
   # Packages
   qepton = pkgs.callPackage ./pkgs/qepton { };
-  microvm-dashboard = pkgs.callPackage ./pkgs/microvm-dashboard { };
+  weaver-free = pkgs.callPackage ./pkgs/weaver-free { };
 }
