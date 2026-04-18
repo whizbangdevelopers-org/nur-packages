@@ -54,6 +54,10 @@ buildNpmPackage rec {
     popd
 
     # Build frontend PWA
+    # VITE_FREE_BUILD=true tells routes.ts to tree-shake paid-tier route
+    # imports (pages/fabrick/*, pages/funnel/*) which are sync-excluded.
+    # Without this, rolldown tries to resolve them and fails.
+    export VITE_FREE_BUILD=true
     npm run build
   '';
 
