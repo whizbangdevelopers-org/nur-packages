@@ -77,6 +77,14 @@ buildNpmPackage rec {
     cp -r tui/dist/* $out/lib/weaver/tui/
     cp tui/package.json $out/lib/weaver/tui/
 
+    # Operator-facing docs — UPGRADE.md is accessible from a shell when the
+    # service is down (the scenario where users need it most). ADMIN and USER
+    # guides also shipped so a shell user can `cat` them during recovery.
+    mkdir -p $out/lib/weaver/docs
+    cp docs/UPGRADE.md $out/lib/weaver/docs/
+    cp docs/ADMIN-GUIDE.md $out/lib/weaver/docs/
+    cp docs/USER-GUIDE.md $out/lib/weaver/docs/
+
     # Shared node_modules (workspaces hoist — one tree serves all three)
     cp -r node_modules $out/lib/weaver/
 
