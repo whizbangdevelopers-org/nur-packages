@@ -15,6 +15,7 @@
   buildNpmPackage,
   fetchFromGitHub,
   nodejs_24,
+  bash,
 }:
 
 buildNpmPackage rec {
@@ -91,7 +92,7 @@ buildNpmPackage rec {
     # Launcher
     mkdir -p $out/bin
     cat > $out/bin/weaver << LAUNCHER
-    #!${nodejs_24}/bin/bash
+    #!${bash}/bin/bash
     export STATIC_DIR="\''${STATIC_DIR:-$out/lib/weaver/frontend}"
     exec ${nodejs_24}/bin/node "$out/lib/weaver/backend/index.js" "\$@"
     LAUNCHER
