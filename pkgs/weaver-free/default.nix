@@ -20,19 +20,19 @@
 
 buildNpmPackage rec {
   pname = "weaver-free";
-  version = "1.0.2";
+  version = "1.0.3";
 
   src = fetchFromGitHub {
     owner = "whizbangdevelopers-org";
     repo = "Weaver-Free";
     rev = "v${version}";
     # Populated by .github/workflows/update-weaver.yml on weaver-release dispatch.
-    hash = "sha256-zhBSO419dgWyXnuGZ6uj/j7dVbzbYr+aEVLqASZoSrU=";
+    hash = "sha256-phLNZYDCOXqgtPyzB2Q/14U14wAtHHDw0c2DeCeMHuw=";
   };
 
   # Single hash covers all workspace deps (root + backend + tui) — Weaver uses npm workspaces.
   # Populated by the update workflow; matches code/nixos/package.nix in the dev repo.
-  npmDepsHash = "sha256-iKvLuBk0RxDDGqJ1FrNgqhpkDURdt0Nbx7nIEZa2GFY=";
+  npmDepsHash = "sha256-Fm+NfFiCrNW6rxYg1Sy12p/Mxl02uZ+I6jTnuWFm85c=";
 
   makeCacheWritable = true;
   nodejs = nodejs_24;
